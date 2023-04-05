@@ -1,5 +1,37 @@
 @use './functions' as f;
 
+$columns: 12;
+$gutter: 2em;
+$max-width: 1220px;
+
+$screen-xs-max: 360px;
+$screen-sm-max: 480px;
+$screen-md-max: 720px;
+$screen-lg-max: 1024px;
+$screen-xl-max: 1600px;
+
+$xs: 0;
+$sm: $screen-sm-max;
+$md: $screen-md-max;
+$lg: $screen-lg-max;
+$xl: $screen-lg-max;
+
+
+$media-breakpoints: (
+    xs: $xs,
+    sm: $sm,
+    md: $md,
+    lg: $lg,
+    xl: $xl
+);
+
+$gutters: (
+    0: 0,
+    1: 1em,
+    2: 2em,
+    3: 3em
+);
+
 //bp
 $bp-phone: f.toRem(599);
 $bp-tablet: f.toRem(720);
