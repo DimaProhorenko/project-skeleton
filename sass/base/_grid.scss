@@ -12,8 +12,14 @@
 [class*='col'] {
     min-height: 1px;
     flex: 1;
+    width: 100%;
     padding-inline: calc(var(--gutter) / 2);
     margin-block-start: var(--gutter-y);
+}
+
+.col {
+    flex: 1 0 0%;
+    width: auto;
 }
 
 // Generate cols
@@ -34,6 +40,10 @@
         --gutter: #{$gut};
     }
     .gy-#{$key} {
+        --gutter-y: #{$gut};
+    }
+    .g-all-#{$key} {
+        --gutter: #{$gut};
         --gutter-y: #{$gut};
     }
 }

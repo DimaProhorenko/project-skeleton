@@ -1,0 +1,7 @@
+@use '../abstracts/' as abs;
+
+.wrapper {
+    padding-inline: abs.$page-padding;
+    max-width: abs.$max-width;
+    margin-inline: auto;
+}

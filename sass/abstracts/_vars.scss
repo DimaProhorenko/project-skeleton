@@ -6,7 +6,7 @@ $max-width: 1220px;
 
 $screen-xs-max: 360px;
 $screen-sm-max: 480px;
-$screen-md-max: 720px;
+$screen-md-max: 620px;
 $screen-lg-max: 1024px;
 $screen-xl-max: 1600px;
 
@@ -31,6 +31,9 @@ $gutters: (
     2: 2em,
     3: 3em
 );
+
+$max-width: f.toRem(1220);
+$page-padding: map-get($map: $gutters, $key: 2);
 
 //bp
 $bp-phone: f.toRem(599);
