@@ -442,11 +442,76 @@ button {
   justify-content: center;
   align-items: center;
 }
+.burger:hover {
+  animation: burger-hover-scale 0.3s ease-in 1;
+}
+.burger.opened .burger__line--top, .burger.opened .burger__line--bot {
+  transition: translate 300ms ease-in-out, rotate 300ms ease-in-out 300ms;
+}
+.burger.opened .burger__line--top {
+  rotate: 45deg;
+  translate: 0 6px;
+}
+.burger.opened .burger__line--bot {
+  rotate: -45deg;
+  translate: 0 -6px;
+}
+.burger.opened .burger__line--mid {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
 .burger__line {
   width: 80%;
   height: 3px;
   background-color: #000;
+  transition: rotate 300ms ease-in-out;
+}
+.burger__line--top, .burger__line--bot {
+  transition: translate 300ms ease-in-out 300ms, rotate 300ms ease-in-out;
 }
 .burger__line--mid {
   margin-block: 3px;
+  transition: opacity 300ms ease-in-out 300ms;
+}
+@keyframes burger-hover-scale {
+  0%, 100% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+}
+
+.form__group {
+  margin-block-end: 1em;
+}
+.form__label {
+  display: block;
+  font-size: 1rem;
+  color: #000;
+  margin-block-end: 0.5em;
+}
+.form__control {
+  display: block;
+  width: 100%;
+  padding-block: 0.625rem;
+  padding-inline: 0.625rem;
+  cursor: pointer;
+  appearance: none;
+  font-size: 1rem;
+  color: #000;
+  border: 2px solid #cacaca;
+  border-radius: 8px;
+  background-color: transparent;
+  transition-property: background-color, border-color, color;
+  transition-duration: 300ms;
+}
+.form__control:focus, .form__control:hover {
+  color: #007bff;
+  background-color: transparent;
+  border-color: #007bff;
+  outline: none;
+}
+.form__control::placeholder {
+  color: #000;
 }
