@@ -58,6 +58,13 @@ select {
   font: inherit;
 }
 
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -424,4 +431,22 @@ select {
 
 .ai-start {
   align-items: flex-start;
+}
+
+.burger {
+  display: block;
+  width: 1.875rem;
+  height: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.burger__line {
+  width: 80%;
+  height: 3px;
+  background-color: #000;
+}
+.burger__line--mid {
+  margin-block: 3px;
 }

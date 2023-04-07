@@ -36,10 +36,16 @@ $max-width: f.toRem(1220);
 $page-padding: map-get($map: $gutters, $key: 2);
 
 //bp
-$bp-phone: f.toRem(599);
-$bp-tablet: f.toRem(720);
-$bp-desktop: f.toRem(1000);
+$bp-phone: f.toRem($sm);
+$bp-tablet: f.toRem($md);
+$bp-desktop: f.toRem($lg);
 
 // Transitions
 $duration: 300ms;
 $timing: ease-in-out;
+
+// Burger
+$clr-burger-line: #000;
+$burger-size: f.toRem(30);
+$burger-line-height: 3px;
+$burger-line-gap: $burger-line-height;

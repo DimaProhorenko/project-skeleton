@@ -1,0 +1,18 @@
+@use '../abstracts/' as abs;
+
+.burger {
+    display: block;
+    width: abs.$burger-size;
+    height: abs.$burger-size;
+    @include abs.flex-center(column);
+
+    &__line {
+        width: 80%;
+        height: abs.$burger-line-height;
+        background-color: abs.$clr-burger-line;
+
+        &--mid {
+            margin-block:  abs.$burger-line-gap;
+        }
+    }
+}
